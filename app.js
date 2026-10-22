@@ -6,9 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
   let viewsHtml = "";
   let tabsHtml = "";
 
+  // מיפוי קבוע של שמות התמונות לפי מזהה הטאב
+  const tabIcons = {
+    "routine": "bone.png",
+    "behavior": "home.png",
+    "health": "medicine.png"
+  };
+
   APP_DATA.workouts.forEach((section, index) => {
     const isFirst = index === 0;
     const viewId = `view-${section.id}`;
+    const iconFileName = tabIcons[section.id] || "bone.png";
     
     viewsHtml += `
       <section class="view" id="${viewId}" ${isFirst ? "" : "hidden"} aria-label="${section.name}">
@@ -36,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tabsHtml += `
       <a href="#${section.id}" data-target="${viewId}" ${isFirst ? 'aria-current="page"' : ''}>
-        <svg viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+        <img src="${iconFileName}" alt="${section.name}" class="tab-icon" />
         ${section.name}
       </a>
     `;
