@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const isFirst = index === 0;
     const viewId = `view-${section.id}`;
     
-    // יצירת התצוגה (View) לכל סשן
     viewsHtml += `
       <section class="view" id="${viewId}" ${isFirst ? "" : "hidden"} aria-label="${section.name}">
         <div class="wk-head"><h1 class="wk-title">${section.name}</h1></div>
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     viewsHtml += `</ul></section>`;
 
-    // יצירת כפתור הטאב התחתון (Tab)
     tabsHtml += `
       <a href="#${section.id}" data-target="${viewId}" ${isFirst ? 'aria-current="page"' : ''}>
         <svg viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
@@ -47,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
   viewsContainer.innerHTML = viewsHtml;
   tabsContainer.innerHTML = tabsHtml;
 
-  // לוגיקת מעבר בין טאבים בלחיצה
   const tabLinks = tabsContainer.querySelectorAll("a");
   const viewSections = viewsContainer.querySelectorAll(".view");
 
@@ -56,11 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const targetId = link.getAttribute("data-target");
 
-      // הסתרת כל המסכים והצגת המסך הנבחר
       viewSections.forEach(sec => sec.hidden = true);
       document.getElementById(targetId).hidden = false;
 
-      // עדכון הסטטוס הפעיל בטאבים
       tabLinks.forEach(l => l.removeAttribute("aria-current"));
       link.setAttribute("aria-current", "page");
 

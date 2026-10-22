@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>מדריך שמירה על אודי</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#F2EBE3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1C1814" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#E0F2FE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -14,28 +14,28 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --sand:#F2EBE3; --paper:#FBF8F4; --ink:#2A2420; --muted:#6E6258;
-  --taupe:#A68A73; --cocoa:#6B5444; --line:#E2D7CB; --moss:#6F7B4E; --moss-soft:#E5E8D8;
-  --hand:"Amatic SC","Assistant",system-ui,sans-serif;
-  --body:"Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --sand:#F0F9FF; --paper:#FFFFFF; --ink:#0F172A; --muted:#475569;
+  --taupe:#0284C7; --cocoa:#0369A1; --line:#BAE6FD; --moss:#0284C7; --moss-soft:#E0F2FE;
+  --hand:"Amatic SC", Calibri, sans-serif;
+  --body: Calibri, "Segoe UI", Arial, sans-serif;
   --nav-h:64px;
   color-scheme:light dark;
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --sand:#1C1814; --paper:#26201B; --ink:#F1E9E0; --muted:#B3A597;
-    --taupe:#C9AE95; --cocoa:#DCC3AA; --line:#3A312A; --moss:#A9B77F; --moss-soft:#2F3324;
+    --sand:#0F172A; --paper:#1E293B; --ink:#F8FAFC; --muted:#94A3B8;
+    --taupe:#38BDF8; --cocoa:#7DD3FC; --line:#334155; --moss:#38BDF8; --moss-soft:#172554;
   }
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{
   margin:0;background:var(--sand);color:var(--ink);font-family:var(--body);
-  font-size:17px;line-height:1.55;
+  font-size:18px;line-height:1.6;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom,0px));
 }
@@ -46,32 +46,32 @@ main{max-width:720px;margin:0 auto;padding:0 16px 32px}
 .view[hidden]{display:none}
 
 .wk-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin:18px 0 6px}
-.wk-title{font-family:var(--hand);font-weight:700;font-size:clamp(50px,14vw,80px);line-height:1;margin:0;color:var(--taupe);letter-spacing:.01em}
+.wk-title{font-family:var(--hand);font-weight:700;font-size:clamp(55px,15vw,85px);line-height:1;margin:0;color:var(--taupe);letter-spacing:.01em}
 
 /* ---------- Exercise list ---------- */
 .ex-list{list-style:none;margin:0;padding:0}
-.ex{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:14px;padding:16px;background:var(--paper);border-radius:14px;margin-bottom:12px;border:1px solid var(--line);align-items:start}
-.ex h3{margin:0;font-size:19px;line-height:1.3;font-weight:800}
-.ss{display:inline-block;font-size:13px;font-weight:700;color:var(--cocoa);border:1px solid var(--taupe);border-radius:6px;padding:0 6px;margin-inline-start:6px;vertical-align:2px}
-.rx{margin:4px 0 0;font-weight:600;color:var(--taupe)}
-.check{width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:var(--sand);cursor:pointer;display:grid;place-items:center;touch-action:manipulation;transition:background .15s,border-color .15s}
-.check svg{width:22px;height:22px;stroke:transparent}
+.ex{display:grid;grid-template-columns:minmax(0,1fr) 48px;gap:14px;padding:18px;background:var(--paper);border-radius:16px;margin-bottom:14px;border:1.5px solid var(--line);align-items:start;box-shadow: 0 2px 6px rgba(2,132,199,0.06)}
+.ex h3{margin:0;font-size:20px;line-height:1.3;font-weight:700;color:var(--cocoa)}
+.ss{display:inline-block;font-size:13px;font-weight:700;color:#0369A1;background:var(--moss-soft);border:1px solid var(--taupe);border-radius:6px;padding:2px 8px;margin-inline-start:8px;vertical-align:2px}
+.rx{margin:6px 0 0;font-weight:700;color:var(--taupe)}
+.check{width:46px;height:46px;border-radius:50%;border:2px solid var(--taupe);background:var(--sand);cursor:pointer;display:grid;place-items:center;touch-action:manipulation;transition:all .15s ease}
+.check svg{width:24px;height:24px;stroke:transparent}
 .check[aria-pressed="true"]{background:var(--moss);border-color:var(--moss)}
-.check[aria-pressed="true"] svg{stroke:#fff}
+/* וי מעוצב לפי התמונה שסיפקת */
+.check[aria-pressed="true"] svg{stroke:#fff; stroke-width:3px; fill:none;}
 
-section.read h2{font-size:23px;line-height:1.3;margin:20px 0 8px;font-weight:800;color:var(--cocoa)}
+section.read h2{font-size:24px;line-height:1.3;margin:20px 0 8px;font-weight:700;color:var(--cocoa)}
 
 /* ---------- Bottom nav ---------- */
-nav.tabs{position:fixed;inset:auto 0 0 0;z-index:5;background:var(--paper);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+nav.tabs{position:fixed;inset:auto 0 0 0;z-index:5;background:var(--paper);border-top:1.5px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
 nav.tabs div{max-width:720px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);height:var(--nav-h)}
-nav.tabs a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:var(--muted);font-size:13px;font-weight:700}
-nav.tabs svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:var(--muted);font-size:14px;font-weight:700;transition:color 0.2s}
+nav.tabs svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 nav.tabs a[aria-current="page"]{color:var(--cocoa)}
 </style>
 </head>
 <body>
 <main>
-  <!-- כאן יטענו הטאבים בצורה דינמית בהתאם לקטגוריות -->
   <div id="views-container"></div>
 </main>
 
