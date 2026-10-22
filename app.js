@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <p style="margin-top: 6px; color: var(--text-main);">${ex.notes}</p>
             </div>
             <button class="check" aria-label="סמן נקרא" onclick="this.setAttribute('aria-pressed', this.getAttribute('aria-pressed') === 'true' ? 'false' : 'true')">
-              <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </button>
           </li>
       `;
